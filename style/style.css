@@ -2,29 +2,36 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: Museo;
+    src: url("../fonts/Museo500-Regular.ttf");
+}
+
 html, body {
     padding: 0;
     margin: 0;
     border: 0;
     width: 100%;
     height: 100vh;
+    font-family: 'Fredoka One', cursive;
+    position: fixed;
 }
 
 body {
     background-image: url("../images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    position: fixed;
     position: relative;
 }
 
 .container {
     background-color: #303030;
     position: absolute;
-    height: 110vh;
-    width: 35vh;
-    right: 10vh;
-    bottom: 40vh;
+    height: 140vh;
+    width: 57vh;
+    right: 20vh;
+    bottom: 69vh;
+    transition: all 1s ease-in-out;
 }
 
 .container::after {
@@ -32,10 +39,32 @@ body {
     background-color: #303030;
     display: block;
     position: absolute;
-    bottom: -12.3vh;
-    left: 5.2vh;
-    width: calc(35vh*1.41/2);
-    height: calc(35vh*1.41/2);
+    bottom: -20.1vh;
+    left: 8.4vh;
+    width: calc(57vh*1.41/2);
+    height: calc(57vh*1.41/2);
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.container-form {
+    background-color: #303030;
+    position: absolute;
+    height: 140vh;
+    width: 57vh;
+    right: 20vh;
+    bottom: -30vh;
+}
+
+.container-form::after {
+    content: '';
+    background-color: #303030;
+    display: block;
+    position: absolute;
+    bottom: -20.1vh;
+    left: 8.4vh;
+    width: calc(57vh*1.41/2);
+    height: calc(57vh*1.41/2);
     transform: rotate(45deg);
     z-index: -1;
 }
@@ -44,10 +73,171 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .content {
-    color: white;
-    top: 0;
-    left: 0;
+    color: whitesmoke;
+}
+
+.content-box img {
+    width: 10vh;
+    position: absolute;
+    bottom: 20vh;
+}
+
+.content-box p {
+    font-size: 8vh;
+    text-align: center;
+    position: absolute;
+    bottom: -8vh;
+}
+
+.content-box button {
+    font-size: 4vh;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 100;
+    background: transparent;
+    border: none;
+    position: absolute;
+    bottom: -10vh;
+}
+
+.content-box button:hover {
+    color: #9e9e9e
+}
+
+.form {
+    position: absolute;
+    height: 90vh;
+    top: 12vh;
+}
+
+@media (max-width: 1023px) {
+        .container {
+        height: 140vh;
+        width: 57vw;
+        left: 0;
+    }
+
+    .container::after {
+        bottom: -20.2vw;
+        left: 8.5vw;
+        width: calc(57vw*1.41/2);
+        height: calc(57vw*1.41/2);
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+
+    .container-form {
+        background-color: #303030;
+        position: absolute;
+        height: 140vh;
+        width: 57vw;
+        left: 0;
+        bottom: -30vh;
+    }
+
+    .container-form::after {
+        bottom: -15.1vh;
+        left: 6.4vh;
+        width: calc(57vw*1.41/2);
+        height: calc(57vw*1.41/2);
+
+    }
+
+    .form {
+        height: 95vh;
+    }
+
+    .content-box img {
+    width: 10vh;
+    position: absolute;
+    bottom: 20vh;
+    }
+
+    .content-box p {
+    font-size: 8vw;
+    text-align: center;
+    position: absolute;
+    bottom: -8vw;
+    }
+
+    .content-box button {
+        font-size: 4vw;
+        font-family: 'Fredoka One', cursive;
+        font-weight: 100;
+        background: transparent;
+        border: none;
+        position: absolute;
+        bottom: -10vw;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .body {
+        background-position-x: -20px;
+    }
+
+    .container {
+        height: 140vh;
+        width: 100vw;
+        left: 0;
+    }
+
+    .container::after {
+        bottom: -20.2vw;
+        left: 8.5vw;
+        width: calc(100vw*1.41/2);
+        height: calc(100vw*1.41/2);
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+
+    .container-form {
+        background-color: #303030;
+        position: absolute;
+        height: 140vh;
+        width: 100vw;
+        left: 0;
+        bottom: -30vh;
+    }
+
+    .container-form::after {
+        bottom: -15.1vh;
+        left: 6.4vh;
+        width: calc(100vw*1.41/2);
+        height: calc(100vw*1.41/2);
+
+    }
+
+    .form {
+        height: 95vh;
+    }
+
+    .content-box img {
+    width: 10vh;
+    position: absolute;
+    bottom: 20vh;
+    }
+
+    .content-box p {
+    font-size: 8vw;
+    text-align: center;
+    position: absolute;
+    bottom: -8vw;
+    }
+
+    .content-box button {
+        font-size: 4vw;
+        font-family: 'Fredoka One', cursive;
+        font-weight: 100;
+        background: transparent;
+        border: none;
+        position: absolute;
+        bottom: -10vw;
+    }
 }
