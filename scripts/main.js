@@ -1,3 +1,3 @@
-$('#sign').on('click', () => {
+$('button').on('click', () => {
     $('#main').toggleClass('container-form');
 })
